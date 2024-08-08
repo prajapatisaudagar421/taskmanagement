@@ -1,4 +1,4 @@
-package com.example;
+package com.example.taskmanagement.text;
 
 import java.util.List;
 
@@ -14,12 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/users")
 public class Controllers  {
+
     @Autowired
     private UserServices userServices;
     @GetMapping
+
     public List<User> getAllUsers(){
         return userServices.getALLUsers();
     }
+
     @GetMapping("/{id}")
     public User getUserById(@PathVariable Long id){
         return userServices.getUserByid(id);
@@ -29,7 +32,7 @@ public class Controllers  {
         return userServices.saveUser(user);
     }
     @DeleteMapping("/{id}")
-    public void deleteUser(Long id){
+    public void deleteUser(@PathVariable Long id){
         userServices.deleteUser(id);
     }
    

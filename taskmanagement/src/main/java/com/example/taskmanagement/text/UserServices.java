@@ -1,11 +1,13 @@
-package com.example;
+package com.example.taskmanagement.text;
 
 import java.util.List;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public class UserServices extends User{
+@Service
+public class UserServices{
     @Autowired
     private UserRepository userRepository;
 

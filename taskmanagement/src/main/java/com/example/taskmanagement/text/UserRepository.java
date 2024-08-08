@@ -1,4 +1,4 @@
-package com.example;
+package com.example.taskmanagement.text;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
